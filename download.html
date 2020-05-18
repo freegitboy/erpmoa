@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://rrcoder.gitee.io/erpmoa/apps/ios/5dkj/download.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>山维科技协同办公系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <style>
+  body{
+  background: #ffffff;
+  }
+.parent {display: table;width:100%;height:100%;}
+.child {
+display: table-cell;
+vertical-align: middle;
+text-align:center;
+}
+.child>img{
+	margin-top:20px;
+}
+.app_title {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: serif;
+	color:#fff;
+	margin-top:20px;
+}
+.button {
+  background: #1c5eb3;
+  background-image: -webkit-linear-gradient(top, #1c5eb3, #1c5eb3);
+  background-image: -moz-linear-gradient(top, #1c5eb3, #1c5eb3);
+  background-image: -ms-linear-gradient(top, #1c5eb3, #1c5eb3);
+  background-image: -o-linear-gradient(top, #1c5eb3, #1c5eb3);
+  background-image: linear-gradient(to bottom, #1c5eb3, #1c5eb3);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 8px;
+  text-shadow: 0px 1px 0px #5b8a3c;
+  -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+  -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 30px 12px 30px;
+  border: solid #4b8f29 1px;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #ffffff;
+  background: #72b352;
+  text-decoration: none;
+}
+  </style>
+  <script  type="text/javascript" >
+    window.onload = function(){
+        var downlink=document.getElementById("imgid");
+        var str= navigator.userAgent.toLowerCase(); 
+        var ver=str.match(/cpu iphone os (.*?) like mac os/);
+        if(!ver){
+            //alert("请在Ios系统中打开");
+        }else{
+            //alert("你当前的Ios系统版本为："+ver[1].replace(/_/g,"."));
+            var iosver=ver[1].replace(/_/g,".");
+            var maxnum=iosver.split(".")[0];
+            if(parseInt(maxnum)<=10){
+               // alert("ios系统低于11");
+                downlink.href="itms-services://?action=download-manifest&amp;url=https://wangscode.gitee.io/erpmoa/ios/ssoa10/manifest.plist";
+            }
+            if(parseInt(maxnum)>10){
+                //alert("ios系统高于10");
+                downlink.href="itms-services://?action=download-manifest&amp;url=https://gitee.com/wangscode/erpmoa/raw/apps/ios/ssoa/manifest.plist";
+            }
+        }
+    }
+  </script>
+</head>
+<body>
+
+<div class="parent">
+<div class="child">
+	<div style="margin-left:150px;"><img src="./ios/ssoa10/app-tip.png" width="200" ></div>
+<img src="./ios/ssoa/512x512.png" width="200" >
+
+<div class="app_title">山维科技协同办公系统</div>
+<div style="margin-top:100px;">
+  <a id="imgid" class="button" href="itms-services://?action=download-manifest&amp;url=https://gitee.com/wangscode/erpmoa/raw/apps/ios/ssoa/manifest.plist">立即下载安装</a>
+</div>
+  </div>
+  </div>
+  
+</body></html>
